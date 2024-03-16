@@ -11,23 +11,49 @@
 <body>
     <header>
         <h1>Welcome to my new JS</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, iure tempore culpa quas consequatur
+            deleniti alias, placeat dolore sunt assumenda corporis in rem cum harum aperiam ipsa nemo. Culpa, velit?</p>
     </header>
     <main>
-        <h1>Welcome to new JS Repo</h1>
-        <ul>
-            <li>Node</li>
-            <li>React</li>
-            <li>Html</li>
-            <li>Frame Work</li>
-        </ul>
+        <section>
+            <h1>Welcome to new JS Repo</h1>
+            <ul>
+                <li>Node</li>
+                <li>React</li>
+                <li>Html</li>
+                <li>Frame Work</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Watermelon</li>
+                <li>lichi</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="">Places i like to visit</h1>
+            <ul>
+                <li class="places">Switzerland</li>
+                <li class="places">USA</li>
+                <li class="places">UK</li>
+                <li>Norway</li>
+            </ul>
+        </section>
     </main>
     <script src="JS/Dom.js"></script>
     <script>
         const liCollection = document.getElementsByTagName('li');
-        for(const li of liCollection){
-            console.log(li.innerText);
+        for (const li of liCollection) {
+            // console.log(li.innerText);
         }
-        
+        const places = document.getElementsByClassName('places')
+        for(const place of places){
+            console.log(place.innerText);
+        }
+
     </script>
 </body>
 
