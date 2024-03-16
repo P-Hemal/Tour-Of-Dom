@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+    <link rel="stylesheet" href="Styles/Style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my new JS</h1>
+    </header>
+    <main>
+        <h1>Welcome to new JS Repo</h1>
+        <ul>
+            <li>Node</li>
+            <li>React</li>
+            <li>Html</li>
+            <li>Frame Work</li>
+        </ul>
+    </main>
+    <script src="JS/Dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+        
+    </script>
+</body>
+
+</html>
