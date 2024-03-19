@@ -7,13 +7,15 @@
     <title>Tour Of Dom</title>
     <link rel="stylesheet" href="Styles/Style.css">
     <style>
-        li {
+        .fruits-container li {
             color: tomato;
         }
-        #fruits-title{
+
+        #fruits-title {
             color: black;
         }
-        .important-places{
+
+        .important-places {
             color: blueviolet;
         }
     </style>
@@ -36,8 +38,8 @@
                 <li>Frame Work</li>
             </ul>
         </section>
-        <section>
-            <h1 id="fruits-title">Fruits I like</h1>
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Mango</li>
@@ -59,20 +61,34 @@
     <script src="JS/append.js"></script>
     <script src="JS/Dom.js"></script>
     <script>
+        // Option 1 = getElementsByTagName
         const liCollection = document.getElementsByTagName('li');
         for (const li of liCollection) {
             // console.log(li.innerText);
         }
-
         const allHeading = document.getElementsByTagName('h1');
         for (const h1 of allHeading) {
             // console.log(h1.innerText);
         }
+        // Option 2 = getElementsById
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'Fruits Changed By Js';
 
+        // Option 3 = getElementsByClassName
         const places = document.getElementsByClassName('important-places');
-        for(const place of places){
+        for (const place of places) {
             console.log(place.innerText);
         }
+
+        // Option 4 = querySelector
+
+        // Option 5 = querySelectorAll
+
+       const someLi = document.querySelectorAll('.fruits-container li');
+        for (const li of someLi) {
+            console.log(li.innerText);
+        }
+
     </script>
 </body>
 
